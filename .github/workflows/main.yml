@@ -1,15 +1,21 @@
 name: Minha Primeira Linha de Montagem
 
+# Gatilhos: roda no push ou manualmente pelo botão
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
   construcao:
+    # Define a máquina virtual (servidor) onde o código roda
     runs-on: ubuntu-latest
+
     steps:
+      # Passo 1: Baixa o código do repositório
       - name: Coletando o código fonte
         uses: actions/checkout@v4
 
+      # Passo 2: Executa a tarefa principal
       - name: Executando tarefa de teste
-        run: echo "sucesso total!"
+        run: echo "A linha de montagem funcionou com sucesso total!"
