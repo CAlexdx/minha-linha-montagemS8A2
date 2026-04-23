@@ -12,4 +12,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Executando tarefa de teste
-        run: echo "A linha de montagem funcionou com sucesso!"
+        run: echo "sucesso total!"
